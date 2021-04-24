@@ -12,6 +12,7 @@ import { AvatarComponent } from './Components/avatar/avatar.component';
 import { NavMenuComponent } from './Components/nav-menu/nav-menu.component';
 import { OptionListComponent } from './Components/option-list/option-list.component';
 import { BarGraphComponent } from './Components/bar-graph/bar-graph.component';
+import { LineGraphComponent } from './Components/line-graph/line-graph.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { BarGraphComponent } from './Components/bar-graph/bar-graph.component';
     NavMenuComponent,
     OptionListComponent,
     BarGraphComponent,
+    LineGraphComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

@@ -33,4 +33,11 @@ export class Data {
       icon: './assets/russia-icon.png',
     },
   ];
+
+  public static WORLD_DATA: Country = {
+    name: 'World Wide',
+    code: 'WORLD',
+    file: './assets/WORLD.json',
+    icon: './assets/world-icon.png',
+  };
 }

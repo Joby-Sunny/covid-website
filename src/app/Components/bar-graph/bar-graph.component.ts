@@ -9,12 +9,16 @@ import { BarGraphData } from 'src/app/Interfaces/bar-graph-data';
 })
 export class BarGraphComponent implements OnChanges {
   @Input() data: Array<BarGraphData> = [];
+  private margin = { top: 20, right: 20, bottom: 30, left: 100 };
   private svg;
-  private margin = 100;
-  private width = 850 - this.margin * 2;
-  private height = 400 - this.margin * 2;
+  private width: number;
+  private height: number;
 
-  constructor() {}
+  constructor() {
+    // configure margins and width/height of the graph
+    this.width = 960 - this.margin.left - this.margin.right;
+    this.height = 500 - this.margin.top - this.margin.bottom;
+  }
 
   ngOnChanges(): void {
     if (this.data.length) {
@@ -28,10 +32,13 @@ export class BarGraphComponent implements OnChanges {
     this.svg = d3
       .select('figure#bar')
       .append('svg')
-      .attr('width', this.width + this.margin * 2)
-      .attr('height', this.height + this.margin * 2)
+      .attr('width', this.width + this.margin.left + this.margin.right)
+      .attr('height', this.height + this.margin.top + this.margin.bottom)
       .append('g')
-      .attr('transform', 'translate(' + this.margin + ',' + this.margin + ')');
+      .attr(
+        'transform',
+        'translate(' + this.margin.left + ',' + this.margin.top + ')'
+      );
   }
 
   private drawBars(data: any[]): void {
@@ -68,7 +75,7 @@ export class BarGraphComponent implements OnChanges {
 
     // Create and fill the bars
     this.svg
-      .selectAll('bars')
+      .selectAll('rect')
       .data(data)
       .enter()
       .append('rect')

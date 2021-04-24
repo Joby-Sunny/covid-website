@@ -7,17 +7,29 @@
     </div>
     <div class="section-right col-xs-12 col-md-8 col-lg-9 col-xl-9 scrollbar-thin">
         <h2>{{ avatarInfo.title }}</h2>
-        <!-- <div class="bar-graph-block"></div>
+        <div class="bar-graph-block">
+            <p>Total Cases/Day</p>
+            <app-bar-graph [data]="totalCasesData"></app-bar-graph>
+        </div>
+        <div class="bar-graph-block">
+            <p>New Cases/Day</p>
+            <app-line-graph [id]="'newCases'" [graphData]="newCasesData"></app-line-graph>
+        </div>
+        <div class="bar-graph-block">
+            <p>New Deaths/Day</p>
+            <app-line-graph [id]="'newDeaths'" [graphData]="newDeathsData"></app-line-graph>
+        </div>
         <div class="info-card-block">
-            <span class="info-card">Population : <b>{{ cardData.population|number }}</b></span>
-            <span class="info-card">Population Density : <b>{{ cardData.populationDensity|number : '1.0-2' }}</b></span>
-            <span class="info-card">Median Age : <b>{{ cardData.medianAge|number : '1.0-2' }}</b></span>
-            <span class="info-card">Age Group 65 : <b>{{ cardData.ageGroup65|number : '1.0-2' }}</b></span>
-            <span class="info-card">Age Group 70 : <b>{{ cardData.ageGroup70|number : '1.0-2' }}</b></span>
-            <span class="info-card">Average Life Expectancy : <b>{{ cardData.lifeExpectancy|number : '1.0-2'
+            <span class="info-card">Population : <b>{{ generalData.population|number }}</b></span>
+            <span class="info-card">Population Density : <b>{{ generalData.populationDensity|number : '1.0-2'
                     }}</b></span>
-            <span class="info-card">Male Smokers : <b>{{ cardData.maleSmokers|number : '1.0-2' }}</b></span>
-            <span class="info-card">Female Smokers : <b>{{ cardData.femaleSmokers|number : '1.0-2' }}</b></span>
-        </div> -->
+            <span class="info-card">Median Age : <b>{{ generalData.medianAge|number : '1.0-2' }}</b></span>
+            <span class="info-card">Age Group 65 : <b>{{ generalData.ageGroup65|number : '1.0-2' }}</b></span>
+            <span class="info-card">Age Group 70 : <b>{{ generalData.ageGroup70|number : '1.0-2' }}</b></span>
+            <span class="info-card">Average Life Expectancy : <b>{{ generalData.lifeExpectancy|number : '1.0-2'
+                    }}</b></span>
+            <span class="info-card">Male Smokers : <b>{{ generalData.maleSmokers|number : '1.0-2' }}</b></span>
+            <span class="info-card">Female Smokers : <b>{{ generalData.femaleSmokers|number : '1.0-2' }}</b></span>
+        </div>
     </div>
 </div>
