@@ -1,0 +1,37 @@
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px;
+    height: 100%;
+    cursor: pointer;
+    color: #ddd;
+    transition-duration: 0.8s;
+
+    &:hover {
+      color: #fff;
+      background-color: #4f4f4f50;
+    }
+
+    img {
+      width: 32px;
+      height: 24px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1.2em;
+      padding-left: 16px;
+    }
+  }
+}
+
+.active {
+  color: #fff;
+  background-color: #4f4f4f50;
+}

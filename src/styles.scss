@@ -19,3 +19,9 @@
     background: #6b72ab;
   }
 }
+
+.h-card {
+  height: calc(100vh - 6em);
+  min-height: calc(100vh - 6em);
+  max-height: calc(100vh - 6em);
+}

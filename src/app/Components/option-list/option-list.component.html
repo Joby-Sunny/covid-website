@@ -1,0 +1,10 @@
+<ul class="d-flex flex-column">
+  <li
+    *ngFor="let option of optionList; index as i; trackBy: trackByFn"
+    (click)="onOptionClick(option)"
+    [ngClass]="{ 'active': option.selected }"
+  >
+    <img [src]="option.icon" alt="option.code" />
+    <p>{{ option.name }}</p>
+  </li>
+</ul>

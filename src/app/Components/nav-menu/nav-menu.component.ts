@@ -6,8 +6,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./nav-menu.component.scss'],
 })
 export class NavMenuComponent implements OnInit {
-  @Input() nextPageLink: string;
-  @Input() nextPageTitle: string;
+  @Input() pageLink: string;
+  @Input() pageTitle: string;
 
   constructor() {}
 

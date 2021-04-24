@@ -1,1 +1,24 @@
-<p>country works!</p>
+<div class="card col-xs-12 col-md-10 col-lg-10 col-xl-10 mx-auto mt-5 h-card">
+  <div class="section-left d-flex flex-column justify-content-between col-xs-12 col-md-4 col-lg-3 col-xl-3">
+    <app-avatar [title]="countryInfo.code" [avatar]="countryInfo.icon" [subTitle]="getAvatarSubtitle()"></app-avatar>
+    <app-option-list [optionList]="countryList" (onClick)="setCountrySelected($event.code)"></app-option-list>
+    <div class="nav-menus">
+      <app-nav-menu [pageLink]="previousPage.path" [pageTitle]="previousPage.label"></app-nav-menu>
+      <app-nav-menu [pageLink]="nextPage.path" [pageTitle]="nextPage.label"></app-nav-menu>
+    </div>
+  </div>
+  <div class="section-right col-xs-12 col-md-8 col-lg-9 col-xl-9 scrollbar-thin">
+    <h2>{{ countryInfo.location }} [{{ countryInfo.code }}]</h2>
+    <div class="bar-graph-block"></div>
+    <div class="info-card-block">
+      <span class="info-card">Population : <b>{{ cardData.population|number }}</b></span>
+      <span class="info-card">Population Density : <b>{{ cardData.populationDensity|number : '1.0-2' }}</b></span>
+      <span class="info-card">Median Age : <b>{{ cardData.medianAge|number : '1.0-2' }}</b></span>
+      <span class="info-card">Age Group 65 : <b>{{ cardData.ageGroup65|number : '1.0-2' }}</b></span>
+      <span class="info-card">Age Group 70 : <b>{{ cardData.ageGroup70|number : '1.0-2' }}</b></span>
+      <span class="info-card">Average Life Expectancy : <b>{{ cardData.lifeExpectancy|number : '1.0-2' }}</b></span>
+      <span class="info-card">Male Smokers : <b>{{ cardData.maleSmokers|number : '1.0-2' }}</b></span>
+      <span class="info-card">Female Smokers : <b>{{ cardData.femaleSmokers|number : '1.0-2' }}</b></span>
+    </div>
+  </div>
+</div>
