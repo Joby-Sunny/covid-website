@@ -11,6 +11,7 @@ import { HistoryComponent } from './Routes/history/history.component';
 import { AvatarComponent } from './Components/avatar/avatar.component';
 import { NavMenuComponent } from './Components/nav-menu/nav-menu.component';
 import { OptionListComponent } from './Components/option-list/option-list.component';
+import { BarGraphComponent } from './Components/bar-graph/bar-graph.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { OptionListComponent } from './Components/option-list/option-list.compon
     AvatarComponent,
     NavMenuComponent,
     OptionListComponent,
+    BarGraphComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

@@ -9,7 +9,9 @@
   </div>
   <div class="section-right col-xs-12 col-md-8 col-lg-9 col-xl-9 scrollbar-thin">
     <h2>{{ countryInfo.location }} [{{ countryInfo.code }}]</h2>
-    <div class="bar-graph-block"></div>
+    <div class="bar-graph-block">
+      <app-bar-graph [data]="graphData"></app-bar-graph>
+    </div>
     <div class="info-card-block">
       <span class="info-card">Population : <b>{{ cardData.population|number }}</b></span>
       <span class="info-card">Population Density : <b>{{ cardData.populationDensity|number : '1.0-2' }}</b></span>
