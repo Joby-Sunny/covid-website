@@ -12,7 +12,7 @@ export class HistoryComponent implements OnInit {
   icon: string = './assets/history-icon.webp';
 
   nextPageLink: string = `/${UIRoutes.COUNTRIES}`;
-  nextPageTitle: string = 'Top Affected Countries';
+  nextPageTitle: string = 'Next : Top Affected Countries';
 
   constructor() {}
 

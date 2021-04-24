@@ -1,0 +1,46 @@
+.h-card {
+  height: calc(100vh - 6em);
+  min-height: calc(100vh - 6em);
+  max-height: calc(100vh - 6em);
+}
+
+.card {
+  border-radius: 0.5em;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.section-left {
+  background-color: #a3001e;
+  padding: 16px;
+}
+
+.section-right {
+  padding: 16px;
+  overflow-y: auto;
+}
+
+h2 {
+  color: #a3001e;
+  margin: 1.5em 0px;
+  font-size: 3em;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h3 {
+  color: #a3001e;
+  font-size: 2em;
+  font-weight: 800;
+  padding-left: 0.8em;
+  margin: 1em 0 0.3em;
+}
+
+p {
+  text-align: justify;
+  color: #555;
+  font-size: 1.2em;
+  padding: 0 1.5em;
+}
